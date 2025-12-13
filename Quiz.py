@@ -1,3 +1,12 @@
+import psycopg2
+
+# Connect to PostgreSQL
+conn = psycopg2.connect(
+    host="localhost",
+    database="yourdatabase",   # replace with your database name
+    user="yourusername",       # replace with your PostgreSQL username
+    password="yourpassword"    # replace with your password
+)
 print("Welcome to Java quiz")
 score=0
 
@@ -72,4 +81,4 @@ else:
     print("The correct answer was b")
 
 # Final score
-print(f"\nYour total score is: {score}/5")
+print("Your total score is:",score)
