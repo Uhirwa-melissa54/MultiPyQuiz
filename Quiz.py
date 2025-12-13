@@ -7,6 +7,10 @@ conn = psycopg2.connect(
     user="yourusername",       # replace with your PostgreSQL username
     password="yourpassword"    # replace with your password
 )
+
+mycursor = mydb.cursor()
+
+mycursor.execute("CREATE DATABASE mydatabase")
 print("Welcome to Java quiz")
 score=0
 
