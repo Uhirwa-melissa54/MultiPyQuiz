@@ -11,8 +11,6 @@ conn = psycopg2.connect(
 mycursor = conn.cursor()
 if mycursor:
     print("Connected successfully")
-
-mycursor.execute("CREATE DATABASE mydatabase")
 print("Welcome to Java quiz")
 score=0
 
