@@ -9,8 +9,8 @@ conn = psycopg2.connect(
 )
 
 mycursor = conn.cursor()
-if mycursor:
-    print("Connected successfully")
+mycursor.execute("CREATE TABLE Melissa (names varchar(255), school varchar(255),age int,location varchar(255))")
+conn.commit()
 print("Welcome to Java quiz")
 score=0
 
