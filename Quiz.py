@@ -9,8 +9,12 @@ conn = psycopg2.connect(
 )
 
 mycursor = conn.cursor()
-mycursor.execute("CREATE TABLE Melissa (names varchar(255), school varchar(255),age int,location varchar(255))")
+sql="INSERT INTO Student(names, school,age,location) values(%s,%s,%s,%s)"
+val=("Melissa","Rwanda Coding",16,"Huye")
+mycursor.execute(sql,val)
 conn.commit()
+print(mycursor.rowcount,"Inserted in databae")
+
 print("Welcome to Java quiz")
 score=0
 
