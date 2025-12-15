@@ -1,14 +1,16 @@
 import psycopg2
 
-# Connect to PostgreSQL
+
 conn = psycopg2.connect(
     host="localhost",
-    database="yourdatabase",   # replace with your database name
-    user="yourusername",       # replace with your PostgreSQL username
-    password="yourpassword"    # replace with your password
+    database="Clients",   # replace with your database name
+    user="postgres",       # replace with your PostgreSQL username
+    password="Uhirwashami54."    # replace with your password
 )
 
-mycursor = mydb.cursor()
+mycursor = conn.cursor()
+if mycursor:
+    print("Connected successfully")
 
 mycursor.execute("CREATE DATABASE mydatabase")
 print("Welcome to Java quiz")
