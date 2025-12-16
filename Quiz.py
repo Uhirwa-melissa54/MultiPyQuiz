@@ -18,6 +18,10 @@ conn.commit()
 print(mycursor.rowcount,"Inserted in databae")
 
 print("Welcome to Java quiz")
+print("Choose what you want to do:")
+print("1.Sign Up")
+print("2. Login")
+option=input()
 score=0
 
 # Question 1
