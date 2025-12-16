@@ -10,8 +10,10 @@ conn = psycopg2.connect(
 
 mycursor = conn.cursor()
 sql="INSERT INTO Student(names, school,age,location) values(%s,%s,%s,%s)"
+sql1="SELECT * from Student"
 val=("Melissa","Rwanda Coding",16,"Huye")
 mycursor.execute(sql,val)
+mycursor.execute(sql1)
 conn.commit()
 print(mycursor.rowcount,"Inserted in databae")
 
